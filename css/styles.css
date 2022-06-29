@@ -1,0 +1,59 @@
+*, *::after, *::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  /* ### Primary */
+  --strcyan: hsl(172, 67%, 45%);
+  /* ### Neutral */
+  --vdkcyan: hsl(183, 100%, 15%);
+  --dkgrycyan: hsl(186, 14%, 43%);
+  --grycyan: hsl(184, 14%, 56%);
+  --lgtgrycyan: hsl(185, 41%, 84%);
+  --vlgtgrycyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+  /* Font */
+  --spacemono: 'Space Mono', monospace;
+}
+
+body {
+  font-family: var(--spacemono);
+  font-size: 16px;
+  text-align: center;
+  background: var(--lgtgrycyan);
+}
+
+.header {
+  text-transform: uppercase;
+  color: var(--dkgrycyan);
+  padding: 2rem;
+}
+
+.container {
+  background: var(--white);
+}
+
+.bill, .total {
+  width: 90%;
+  margin: 0 auto;
+}
+
+input {
+  width: 100%;
+  text-align: left;
+}
+
+.btn-tip {
+  width: 30%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
