@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   box-sizing: border-box;
 }
@@ -15,39 +17,140 @@
   --vlgtgrycyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
   /* Font */
-  --spacemono: 'Space Mono', monospace;
+  --spacemono: "Space Mono", monospace;
 }
 
 body {
-  font-family: var(--spacemono);
-  font-size: 16px;
-  text-align: center;
   background: var(--lgtgrycyan);
 }
 
+input,
+button,
+body {
+  font-family: var(--spacemono);
+}
+
 .header {
+  text-align: center;
   text-transform: uppercase;
   color: var(--dkgrycyan);
   padding: 2rem;
+  letter-spacing: 0.5rem;
+  margin-top: 5rem;
 }
 
 .container {
   background: var(--white);
+  width: 90%;
+  margin: 20px auto;
+  max-width: 750px;
+  border-radius: 15px;
+  display: flex;
+  gap: 10px;
+  padding: 15px;
 }
 
-.bill, .total {
-  width: 90%;
-  margin: 0 auto;
+.bill {
+  width: 50%;
 }
 
 input {
   width: 100%;
-  text-align: left;
+  text-align: right;
+  padding: 0.2rem;
+  transition: all 0.2s ease-in;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.btn-tip {
-  width: 30%;
+label {
+  font-size: 0.875rem;
+  color: var(--dkgrycyan);
+  text-align: left;
+  display: block;
 }
+
+.form--bill label,
+.form--people label {
+  padding-bottom: 10px;
+}
+
+input,
+button {
+  font-size: 1.5rem;
+}
+
+.form--bill,
+.form--tip,
+.form--people {
+  padding: 1rem;
+}
+
+input[type="number"] {
+  border-radius: 3px;
+  border: none;
+  background: var(--vlgtgrycyan);
+  color: var(--lgtgrycyan);
+  -moz-appearance: textfield;
+}
+
+.withbill input[type="number"] {
+  color: var(--vdkcyan);
+}
+
+input[type="number"]:focus,
+input[type="number"]:hover {
+  outline: 0;
+  border: 2px solid var(--strcyan);
+  color: var(--vdkcyan);
+}
+
+.form--tip {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.form--tip label {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+button {
+  background: var(--vdkcyan);
+  color: var(--white);
+  padding: 0.2rem;
+  border: 0;
+  border-radius: 3px;
+  transition: all 0.2s ease-out;
+}
+
+button:hover {
+  background: var(--strcyan);
+  color: var(--vdkcyan);
+}
+
+/* Add no people if value is 0 */
+.nopeople {
+  position: relative;
+}
+
+.nopeople input {
+  border: 2px solid #d1803e;
+  color: var(--vdkcyan);
+}
+
+.nopeople label[for="people"]::after {
+  position: absolute;
+  content: "Can't be zero";
+  color: #d1803e;
+  right: 14px;
+}
+
+/* Total Part */
 
 .attribution {
   font-size: 11px;
