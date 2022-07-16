@@ -152,6 +152,64 @@ button:hover {
 
 /* Total Part */
 
+.total {
+  width: 50%;
+  padding: 2rem;
+  background: var(--vdkcyan);
+  position: relative;
+  border-radius: 15px;
+}
+
+.tip {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tip h3 {
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+.tip h3 span {
+  color: var(--lgtgrycyan);
+}
+
+.tip h1 {
+  font-size: 3rem;
+  color: var(--strcyan);
+}
+
+.reset {
+  display: grid;
+  margin: 3.5rem auto 0;
+  width: 95%;
+  color: var(--vdkcyan);
+  background: var(--strcyan);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.reset:hover {
+  background: var(--lgtgrycyan);
+}
+
+/* Awesome i */
+.form--bill,
+.form--people {
+  position: relative;
+}
+
+.form--bill i,
+.form--people i {
+  position: absolute;
+  left: 1rem;
+  bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--lgtgrycyan);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -159,4 +217,21 @@ button:hover {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 635px) {
+  .container {
+    max-width: 450px;
+    flex-direction: column;
+  }
+  .bill,
+  .total {
+    width: 100%;
+  }
+  .header {
+    margin-top: 2rem;
+  }
+  .attribution {
+    padding-bottom: 2rem;
+  }
 }
