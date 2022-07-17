@@ -12,7 +12,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -30,22 +29,29 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+Laptop view of layout
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![](./images/laptop.jpg)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
+Tablet mode of the calculator app
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+![](./images/tablet.jpg)
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+The mobile layout of the Tip calculator
+
+![](./images/laptop.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Link](https://github.com/issagoodlifeInc/Tip-Calculator-App.git)
+- Live Site URL: [Live Tip Calculator App](https://tip-calculator-leskim.netlify.app/)
 
 ## My process
+
+Started out with the html markup
+Then styled my components as per the requirements
+Added responsivenes for mobile view
+Finally added the js functionalities for the project
 
 ### Built with
 
@@ -53,60 +59,65 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Laptop-first workflow
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Reinforced my DOM manipulation skills and used => functions for all my functions
 
-To see how you can add code snippets, see below:
+Proud of these:-
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+/* Add no people if value is 0 */
+.nopeople {
+  position: relative;
+}
+
+.nopeople input {
+  border: 2px solid #d1803e;
+  color: var(--vdkcyan);
+}
+
+.nopeople label[for="people"]::after {
+  position: absolute;
+  content: "Can't be zero";
+  color: #d1803e;
+  right: 14px;
 }
 ```
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+// Code to work with the custom tip input
+customTipBtn.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && e.target.value > 0) {
+    calculateAll();
+  }
+  // Sellecting my inputs
+  let container = document.querySelector(".container"),
+    totalBill = container.querySelector('input[name="bill"]'),
+    noOfPeople = container.querySelector('input[name="people"]'),
+    customTip = container.querySelector('input[name="custom tip"]');
+
+  // Making the background stick to the btns for 3s
+  setTimeout(() => {
+    btn.style.background = "hsl(183, 100%, 15%)";
+  }, 3000);
+  btn.style.background = "hsl(172, 67%, 45%)";
+});
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+Making reusable and to the point code
+Didn't like my function to calculcate the tip and total
+Using tenarys for conditions not exceding 2
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Lesley Kimutai](https://leskimfamily.herokuapp.com/lesley)
+- Frontend Mentor - [@Leskim](https://www.frontendmentor.io/profile/Leskim)
+- Twitter - [@KimutaiLesley](https://twitter.com/KimutaiLesley)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+[Collins Kibenon](https://github.com/collinskibenon) You giving up on this made me want to do it more 😅 finish up your bro .... you got this 💪🏾
