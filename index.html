@@ -43,41 +43,35 @@
 
     <div class="container row splitter">
       <div class="bill">
-        <form class="" action="index.html" method="get">
-          <div class="form--bill">
-            <label for="bill">Bill</label>
-            <input type="number" name="bill" placeholder="0" min="0" />
-            <i class="fa-solid fa-dollar-sign"></i>
-          </div>
+        <!-- <form class="" action="index.html" method="get"> -->
+        <div class="form--bill">
+          <label for="bill">Bill</label>
+          <input type="number" name="bill" placeholder="0" min="0" />
+          <i class="fa-solid fa-dollar-sign"></i>
+        </div>
 
-          <div class="form--tip">
-            <label for="tip">Select tip %</label>
-            <button class="btn-tip">5%</button>
-            <button class="btn-tip">10%</button>
-            <button class="btn-tip">15%</button>
-            <button class="btn-tip">25%</button>
-            <button class="btn-tip">50%</button>
-            <input
-              class="btn-tip"
-              type="number"
-              name="custom tip"
-              placeholder="Custom"
-              min="0"
-            />
-          </div>
+        <div class="form--tip">
+          <label for="tip">Select tip %</label>
+          <button class="btn btn-tip">5%</button>
+          <button class="btn btn-tip">10%</button>
+          <button class="btn btn-tip">15%</button>
+          <button class="btn btn-tip">25%</button>
+          <button class="btn btn-tip">50%</button>
+          <input
+            class="btn-tip"
+            type="number"
+            name="custom tip"
+            placeholder="Custom"
+            min="0"
+          />
+        </div>
 
-          <div class="form--people">
-            <label for="people">Number of people</label>
-            <input
-              type="number"
-              name="people"
-              value="0"
-              placeholder="0"
-              min="0"
-            />
-            <i class="fa-solid fa-user-group"></i>
-          </div>
-        </form>
+        <div class="form--people">
+          <label for="people">Number of people</label>
+          <input type="number" name="people" placeholder="0" min="0" />
+          <i class="fa-solid fa-user-group"></i>
+        </div>
+        <!-- </form> -->
       </div>
       <div class="total">
         <div class="tip">
@@ -92,7 +86,7 @@
             Total <br />
             <span>/ person</span>
           </h3>
-          <h1 class="tip-total tip_all">$0.00</h1>
+          <h1 class="tip-total total_one">$0.00</h1>
         </div>
 
         <button class="reset" type="reset" name="button">RESET</button>
