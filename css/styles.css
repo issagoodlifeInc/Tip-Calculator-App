@@ -36,14 +36,14 @@ body {
   color: var(--dkgrycyan);
   padding: 2rem;
   letter-spacing: 0.5rem;
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 .container {
   background: var(--white);
   width: 90%;
   margin: 20px auto;
-  max-width: 750px;
+  max-width: 850px;
   border-radius: 15px;
   display: flex;
   gap: 10px;
@@ -167,12 +167,12 @@ button:hover {
   align-items: center;
 }
 
-.tip h3 {
+.tip h2 {
   font-size: 0.8rem;
   color: #ffffff;
 }
 
-.tip h3 span {
+.tip h2 span {
   color: var(--lgtgrycyan);
 }
 
