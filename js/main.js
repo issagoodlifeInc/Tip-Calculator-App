@@ -38,7 +38,8 @@ const resetAll = () => {
   totalBill.value = "";
   noOfPeople.value = "";
   customTip.value = "";
-  console.log(totalBill.innerHTML, noOfPeople, customTip);
+  tipAPerPsn.textContent = "$0.00";
+  totalAPerPsn.textContent = "$0.00";
 };
 
 const calculateAll = (btn) => {
@@ -63,6 +64,7 @@ const calculateAll = (btn) => {
   }, 3000);
 
   btn.style.background = "hsl(172, 67%, 45%)";
+  // btn.style.color = "#FFFFFF";
 
   if (noOfPeople <= 0) {
     container.querySelector(".form--people").classList.add("nopeople");
