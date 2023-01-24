@@ -58,6 +58,7 @@ input {
   width: 100%;
   text-align: right;
   padding: 0.2rem;
+  padding-inline-end: 1rem;
   transition: all 0.2s ease-in;
 }
 input::-webkit-outer-spin-button,
@@ -98,7 +99,7 @@ input[type="number"] {
 }
 
 .withbill input[type="number"] {
-  color: var(--vdkcyan);
+  color: var(--vdkcyan) !important;
 }
 
 input[type="number"]:focus,
@@ -143,11 +144,16 @@ button:hover {
   color: var(--vdkcyan);
 }
 
-.nopeople label[for="people"]::after {
+.nopeople label::after {
   position: absolute;
   content: "Can't be zero";
   color: #d1803e;
   right: 14px;
+}
+
+.fa-solid {
+  padding-inline-start: 0.5rem;
+  padding-block-end: 0.3rem;
 }
 
 /* Total Part */

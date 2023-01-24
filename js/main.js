@@ -51,7 +51,7 @@ const calculateAll = (btn) => {
   if (customTip > 0) {
     tipAmount = customTip;
   } else {
-    tipAmount = Math.floor((parseInt(btn.textContent) / 100) * totalBill) + 1;
+    tipAmount = (parseInt(btn.textContent) / 100) * totalBill;
   }
   let tipPerPerson = tipAmount / noOfPeople;
   let totalPerPerson = tipPerPerson + totalBill / noOfPeople;
@@ -60,10 +60,11 @@ const calculateAll = (btn) => {
   totalAPerPsn.textContent = `$${totalPerPerson.toFixed(2)}`;
 
   setTimeout(() => {
-    btn.style.background = "hsl(183, 100%, 15%)";
+    btn.style.background = "var(--dkgrycyan)";
   }, 3000);
 
-  btn.style.background = "hsl(172, 67%, 45%)";
+  btn.style.background = "var(--strcyan)";
+  btn.style.color = "var(--white)";
   // btn.style.color = "#FFFFFF";
 
   if (noOfPeople <= 0) {
